@@ -12,10 +12,10 @@ on:
 #    branches: [ Huihuiyule-www/kafka ]
   push:
     branches:
-    - trunk
+    - windows
     - release/*
 #  pull_request:
-#    branches: [ trunk ]
+#    branches: [ windows ]
 
 permissions:
   contents: read
@@ -37,7 +37,7 @@ jobs:
       with:
         arguments: build
     - name: Build kafka
-      uses: Huihuiyule-www/kafka@trunk
+      uses: Huihuiyule-www/kafka@windows
       with:
         arguments: ./gradlew srcJar
         
